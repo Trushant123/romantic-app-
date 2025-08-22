@@ -1,0 +1,178 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to romantic pastel color palette */
+  --background: #ffffff;
+  --foreground: #374151;
+  --card: #fefce8;
+  --card-foreground: #374151;
+  --popover: #ffffff;
+  --popover-foreground: #374151;
+  --primary: #d97706;
+  --primary-foreground: #ffffff;
+  --secondary: #f472b6;
+  --secondary-foreground: #ffffff;
+  --muted: #fefce8;
+  --muted-foreground: #374151;
+  --accent: #6b5b9a;
+  --accent-foreground: #ffffff;
+  --destructive: #e53e3e;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --ring: rgba(255, 255, 255, 0.5);
+  --chart-1: #f472b6;
+  --chart-2: #6b5b9a;
+  --chart-3: #d97706;
+  --chart-4: #fefce8;
+  --chart-5: #374151;
+  --radius: 0.5rem;
+  --sidebar: #fefce8;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: #d97706;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f472b6;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+  /* Updated dark mode colors to maintain romantic theme */
+  --background: #1f1f23;
+  --foreground: #fef7f0;
+  --card: #2a2a2e;
+  --card-foreground: #fef7f0;
+  --popover: #1f1f23;
+  --popover-foreground: #fef7f0;
+  --primary: #f59e0b;
+  --primary-foreground: #1f1f23;
+  --secondary: #f472b6;
+  --secondary-foreground: #1f1f23;
+  --muted: #2a2a2e;
+  --muted-foreground: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-foreground: #fef7f0;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef7f0;
+  --border: #3f3f46;
+  --input: #2a2a2e;
+  --ring: rgba(248, 113, 182, 0.3);
+  --chart-1: #f472b6;
+  --chart-2: #8b5cf6;
+  --chart-3: #f59e0b;
+  --chart-4: #2a2a2e;
+  --chart-5: #fef7f0;
+  --sidebar: #1f1f23;
+  --sidebar-foreground: #fef7f0;
+  --sidebar-primary: #f59e0b;
+  --sidebar-primary-foreground: #1f1f23;
+  --sidebar-accent: #f472b6;
+  --sidebar-accent-foreground: #1f1f23;
+  --sidebar-border: #3f3f46;
+  --sidebar-ring: rgba(248, 113, 182, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Added romantic font families */
+  --font-romantic-heading: "Montserrat", sans-serif;
+  --font-romantic-body: "Open Sans", sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Added romantic gradient background */
+    background: linear-gradient(135deg, #fef7f0 0%, #fdf2f8 50%, #fef3c7 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Added romantic animations and effects */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(244, 114, 182, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.6), 0 0 30px rgba(244, 114, 182, 0.4);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow-animation {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.heartbeat-animation {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.romantic-text-shadow {
+  text-shadow: 2px 2px 4px rgba(244, 114, 182, 0.3);
+}
