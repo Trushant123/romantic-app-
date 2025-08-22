@@ -18,7 +18,7 @@ interface Photo {
 const photos: Photo[] = [
   {
     id: 1,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/first%20gym%20pic.jpg-mv4IpnPaZWP2uJEDBL4s6jBBYIJGpf.jpeg", // replaced placeholder with real gym selfie
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-22%20at%2011.45.38_988a12d4.jpg-njZSW2xA1ZQgytLmF5voIy36ZNF3Cy.jpeg", // replaced placeholder with real gym selfie
     caption: "Where it all began",
     location: "The Gym",
     date: "Our Beginning",
@@ -26,7 +26,7 @@ const photos: Photo[] = [
   },
   {
     id: 2,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-22%20at%2011.45.38_988a12d4.jpg-njZSW2xA1ZQgytLmF5voIy36ZNF3Cy.jpeg", // replaced placeholder with real mall mirror selfie
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/first%20gym%20pic.jpg-mv4IpnPaZWP2uJEDBL4s6jBBYIJGpf.jpeg", // replaced placeholder with real mall mirror selfie
     caption: "Our first official date",
     location: "The Mall",
     date: "July 24",
